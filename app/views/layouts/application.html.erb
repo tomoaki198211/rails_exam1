@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <title>RailsExam1</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +10,27 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="h-100">
+    <header class="w-100 text-center">
+      <div class="header-left"></div>
+      <p>ホーム</p>
+    </header>
+    <div class="d-flex flex-row w-100" style="height: calc(100% - 50px)">
+      <nav>
+        <ul class="nav flex-column m-0 p-3 text-center">
+          <li class="nav-item mb-4"><%= link_to 'ホーム', posts_path, class: "text-decoration-none text-dark" %></li>
+          <li>
+            <%= link_to (new_post_path)do %>
+              <button type="button" class="btn btn-primary">投稿する</button>
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+      <main class="w-100 bg-white">
+        <div class="p-3">
+          <%= yield %>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
