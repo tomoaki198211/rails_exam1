@@ -1,5 +1,5 @@
 <h1>投稿一覧</h1>
-
+<p><%= notice %></p>
 <table>
   <tr>
     <th>タイトル</th>
@@ -9,7 +9,8 @@
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.content %></td>
-    <td><%= link_to "編集", edit_post_path(post.id) %>
+    <td><%= link_to "編集", edit_post_path(post.id), data: {confirm: '本当に編集していいですか？'} %>
+    <td><%= link_to "削除", post_path(post.id), method: :delete ,data: {confirm: '本当に削除していいですか？'}%>
   </tr>
 <% end %>
 </table>
