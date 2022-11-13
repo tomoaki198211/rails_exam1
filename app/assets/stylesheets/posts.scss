@@ -1,13 +1,67 @@
-header {
-  height: 30px;
+html {
+  background-color: #ffffff;
+  position: relative;
 }
 
-nav {
-  width: 200px;
-  border-right: 1px solid #dcdcdc;
-  background-color: #ffffff;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  padding-bottom: 50px;
+  min-height: 100%;
+}
+
+header {
+  height: 50px;
+  line-height: 50px;
 }
 
 header p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+
+footer {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #00aeef;
+  line-height: 50px;
+}
+
+footer p {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.side_menu,
+.post_article {
+  border-right: 1px solid #dcdcdc;
+}
+
+.one_article {
+  width: 70%;
+  border-bottom: 1px solid #dcdcdc;
+  margin: 0 auto;
+}
+
+.right_edit_destroy {
+  text-align: right;
+}
+
+.right_edit_destroy a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.post_content {
+  width: 70%;
+  margin: 50px auto;
+}
+
+.post_content .btn {
+  margin: 20px auto;
+  display: block;
 }

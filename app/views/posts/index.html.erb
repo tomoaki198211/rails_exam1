@@ -1,16 +1,14 @@
-<h1>投稿一覧</h1>
-<p><%= notice %></p>
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th>内容</th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.content %></td>
-    <td><%= link_to "編集", edit_post_path(post.id), data: {confirm: '本当に編集していいですか？'} %>
-    <td><%= link_to "削除", post_path(post.id), method: :delete ,data: {confirm: '本当に削除していいですか？'}%>
-  </tr>
-<% end %>
-</table>
+<div>
+  <% content_for(:title, "ホーム") %>
+  <p><%= notice %></p>
+  <% @posts.each do |post| %>
+    <div class="one_article">
+      <p><%= l post.created_at %></p>
+      <p><%= post.content %></p>
+      <div class="right_edit_destroy">
+        <%= link_to "編集", edit_post_path(post.id), data: {confirm: '本当に編集していいですか？'} %>
+        <%= link_to "削除", post_path(post.id), method: :delete ,data: {confirm: '本当に削除していいですか？'}%>
+      </div>
+    </div>
+  <% end %>
+</div>
