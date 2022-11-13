@@ -5,21 +5,27 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
 }
 
 .wrapper {
+  padding-top: 50px;
   padding-bottom: 50px;
   min-height: 100%;
+  color: #343a40;
 }
 
 header {
   height: 50px;
   line-height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: #00aeef;
 }
 
 header p {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 
 footer {
@@ -36,15 +42,24 @@ footer p {
   color: #ffffff;
 }
 
-.side_menu,
+.side_menu {
+  position: relative;
+  border-right: 1px solid #dcdcdc;
+}
+
 .post_article {
   border-right: 1px solid #dcdcdc;
+}
+
+nav {
+  position: fixed;
 }
 
 .one_article {
   width: 70%;
   border-bottom: 1px solid #dcdcdc;
   margin: 0 auto;
+  color: #343a40;
 }
 
 .right_edit_destroy {
@@ -53,10 +68,11 @@ footer p {
 
 .right_edit_destroy a {
   margin-left: 10px;
-  text-decoration: none;
+  color: #343a40;
 }
 
 .post_content {
+  color: #343a40;
   width: 70%;
   margin: 50px auto;
 }
@@ -73,4 +89,10 @@ footer p {
 .post_content .btn:hover {
   background-color: #0000ff;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: static;
+  }
 }

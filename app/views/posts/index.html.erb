@@ -6,8 +6,8 @@
       <p><%= l post.created_at %></p>
       <p><%= post.content %></p>
       <div class="right_edit_destroy">
-        <%= link_to "編集", edit_post_path(post.id), data: {confirm: '本当に編集していいですか？'} %>
-        <%= link_to "削除", post_path(post.id), method: :delete ,data: {confirm: '本当に削除していいですか？'}%>
+        <%= link_to "&#9998;編集".html_safe, edit_post_path(post.id), data: {confirm: '本当に編集していいですか？'}, class: "text-decoration-none" %>
+        <%= link_to "&times;削除".html_safe, post_path(post.id), method: :delete ,data: {confirm: '本当に削除していいですか？'}, class: "text-decoration-none" %>
       </div>
     </div>
   <% end %>
