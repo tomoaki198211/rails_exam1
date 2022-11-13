@@ -2,3 +2,7 @@ ja:
   time:
     formats:
       default: '%Y/%m/%d %H:%M:%S'
+  helpers:
+    submit:
+      create: '登録画面へ'
+      update: '更新する'
