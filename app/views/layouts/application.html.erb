@@ -18,13 +18,9 @@
       <div class="row">
         <div class="side_menu col-lg-2 center-block">
           <nav>
-            <ul class="nav flex-column m-0 p-3 text-center">
-              <li class="nav-item mb-4"><%= link_to 'ホーム', posts_path, class: "text-decoration-none text-dark" %></li>
-              <li>
-                <%= link_to (new_post_path)do %>
-                  <button type="button" class="btn btn-primary btn-block">投稿する</button>
-                <% end %>
-              </li>
+            <ul class="nav flex-column m-0 p-3">
+              <li class="nav-item mb-4"><%= link_to '&#127968;ホーム'.html_safe, posts_path, class: "text-decoration-none text-dark" %></li>
+              <li class="nav-item mb-4"><%= link_to '＋投稿する', new_post_path, class: "text-decoration-none text-dark" %></li>
             </ul>
           </nav>
         </div>

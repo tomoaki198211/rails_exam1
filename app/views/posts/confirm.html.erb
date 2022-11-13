@@ -1,11 +1,10 @@
 <% content_for(:title, "投稿確認") %>
 <h3>以下の内容で、送信する。</h3>
-
-<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
-  <%= form.hidden_field :content %>
-  <p>content:<%= @post.content %></p>
-  <%= form.submit  "登録する" %>
-  <%= form.submit '戻る', name: 'back' %>
+<%= form_with(model: @post, local: true, url: posts_path) do |form| %>
+  <div class="post_content">
+    <%= form.label :content %>
+    <%= form.text_area :content, class: "form-control", rows: 3 %>
+    <%= form.submit  "登録する",  class: "btn" %>
+    <%= form.submit '戻る',  class: "btn", name: 'back' %>
+  </div>
 <% end %>
-
-
