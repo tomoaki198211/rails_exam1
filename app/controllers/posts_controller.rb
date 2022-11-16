@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.all.order(created_at: "DESC")
   end
@@ -9,14 +10,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if params[:back]
-      render :new
+    return render :new if params[:back]
+    if @post.save
+      redirect_to posts_path, notice: "投稿しました！"
     else
-      if @post.save
-        redirect_to posts_path, notice: "投稿しました！"
-      else
-        render :new
-      end
+      render :new
     end
   end
 
